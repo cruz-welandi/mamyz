@@ -7,12 +7,12 @@
         <title>Mamyz</title>
     </head>
     <body>
-        <nav class="flex justify-between px-20 py-4 items-center">
+        <nav class="flex lg:justify-between xl:justify-between lg:px-10 xl:px-20 py-4 items-center md:px-10 md:justify-between md:flex sm:flex sm:justify-between sm:px-10">
             <div class="flex gap-x-20">
                 <div>
                     <img src="assets/Rectangle 467 (1).png" alt="logo mamyz">
                 </div>
-                <div>
+                <div class="hidden xl:block lg:block">
                     <ul class="flex gap-x-6">
                         <li><a href="#" class="font-bold">Features</a></li>
                         <li><a href="#" class="font-bold">Pricing</a></li>
@@ -21,7 +21,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="flex gap-x-4">
+            <div class="flex gap-x-4 hidden lg:block lg:flex xl:block xl:flex md:block md:flex">
                 <button class="bg-black flex rounded gap-x-2 items-center pr-2">
                     <img src="assets/Google-Play.webp" alt="logo google-play" class="h-14">
                     <div class="flex flex-col  text-white">
@@ -37,6 +37,11 @@
                     </div> 
                 </button>
             </div>
+            <button class="text-black mobile-menu-button lg:hidden xl:hidden">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </nav>
     </body>
 </html>
