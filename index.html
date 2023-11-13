@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script src="tailwind.js"></script>
         <title>Mamyz</title>
     </head>
@@ -13,7 +14,7 @@
                     <div>
                         <img src="assets/Rectangle 467 (1).png" alt="logo mamyz">
                     </div>
-                    <div class="hidden xl:block lg:block">
+                    <div class=" hidden   xl:block lg:block nav-links">
                         <ul class="flex gap-x-6">
                             <li><a href="#" class="font-bold">Features</a></li>
                             <li><a href="#" class="font-bold">Pricing</a></li>
@@ -39,10 +40,15 @@
                     </button>
                 </div>
                 <button class="text-black mobile-menu-button lg:hidden xl:hidden">
-                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
+                    <ion-icon name="menu" onclick="onToggleMenu(this)" class="text-4xl"></ion-icon>
                 </button>
+                <script>
+                    function onToggleMenu(e) {
+                        const navLinks = document.querySelector(".nav-links");
+                        e.name= e.name === 'menu' ? 'close' : 'menu';
+                        navLinks.classList.toggle('top-[9%]');
+                    }
+                </script>
             </nav>
 
 
